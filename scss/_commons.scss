@@ -1,0 +1,49 @@
+@import "./_variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open-Sans", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1406px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  color: $darckText;
+}
+
+.sorting-active {
+  color: $violetText !important;
+  opacity: 1 !important;
+}
+
+.is-visable {
+  display: block;
+}
+
+.arrow {
+  width: 8px;
+  height: 8px;
+  transform: rotate(180deg);
+}
+
+.js-validate-error-label {
+  display: none;
+}
+
+.js-validate-error-field {
+  border: none !important;
+  border-bottom: 1px solid $orangeHover !important;
+}

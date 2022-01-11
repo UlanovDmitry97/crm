@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM</title>
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery.js"></script>
+  <script src="./js/jquery.inputmask.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a class="header__logo-link" href="#">
+        <picture>
+          <source srcset="./img/logo-320.png" media="(max-width: 480px)">
+          <source srcset="./img/logo.png" media="(min-width: 1700px)">
+          <img src="./img/logo.png" alt="Логотип">
+        </picture>
+      </a>
+      <form class="header__search" action="/">
+        <input class="header__search-input" type="text" placeholder="Введите запрос">
+        <ul class="header__search-dropdown"></ul>
+      </form>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main__container">
+      <h1 class="section-title">Клиенты</h1>
+
+      <div class="table-wrapp">
+        <table class="clients-table">
+          <tbody class="clients-table__tbody">
+            <tr class="clients-table__sorting">
+              <td class="clients-table__td clients-table__td_id">
+                <button id="ID" class="btn-sorting" data-sorting="descending">ID
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+
+                <!-- <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">1</li>
+                  <li class="dropdown__item">2</li>
+                  <li class="dropdown__item">3</li>
+                  <li class="dropdown__item">4</li>
+                </ul>
+              </div> -->
+              </td>
+
+              <td class="clients-table__td clients-table__td_fio">
+                <button id="fio" class="btn-sorting" data-sorting="descending">Фамилия Имя Отчество
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                  <span class="btn-sorting__letters">А-Я</span>
+                </button>
+              </td>
+
+              <td class="clients-table__td clients-table__td_date">
+                <button id="CreateTime" class="btn-sorting" data-sorting="descending">Дата и время создания
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </td>
+
+              <td class="clients-table__td clients-table__td_changes">
+                <button id="changeTime" class="btn-sorting" data-sorting="descending">Последние изменения
+                  <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </td>
+
+              <td class="clients-table__td clients-table__td_contacts">
+                <span class="clients-table__td-title">Контакты</span>
+              </td>
+
+              <td class="clients-table__td clients-table__td_actions">
+                <span class="clients-table__td-title">Действия</span>
+              </td>
+            </tr>
+            <tr class="clients-table__loader-tr">
+              <td>
+                <div class="clients-table__loader">
+                  <svg class="clients-table__loader-icon" width="100" height="100" viewbox="0 0 100 100" fill="none">
+                    <g clip-path="url(#clip0_121_2401)">
+                      <path
+                        d="M14.0002 50.0005C14.0002 69.8825 30.1182 86.0005 50.0002 86.0005C69.8822 86.0005 86.0002 69.8825 86.0002 50.0005C86.0002 30.1185 69.8823 14.0005 50.0003 14.0005C45.3513 14.0005 40.9082 14.8815 36.8282 16.4865"
+                        stroke="#9873FF" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_121_2401">
+                        <rect width="100" height="100" fill="white" />
+                      </clippath>
+                    </defs>
+                  </svg>
+
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

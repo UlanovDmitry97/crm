@@ -1,0 +1,17 @@
+@import "./_variables";
+
+.main {
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 90px 250px;
+      background-color: #E5E5E5;
+    }
+}
+
+@media (max-width: 1366px) {
+  .main__container {
+    padding: 40px 20px;
+  }
+}
